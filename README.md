@@ -1,5 +1,5 @@
 # DeliveryService
 Інформаційна система "Служба доставки"
 
-#Технології
+# Технології
 DDD, EntityFramework (Code First), AutoMapper, Windows Forms...
