@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{43CFFE2F-E03C-4106-AE6B-684DC75D4D54}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DeliveryService.UI</RootNamespace>
+    <AssemblyName>DeliveryService.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CargoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CargoForm.Designer.cs">
+      <DependentUpon>CargoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CourierForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CourierForm.Designer.cs">
+      <DependentUpon>CourierForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerForm.Designer.cs">
+      <DependentUpon>CustomerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeliveryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeliveryForm.Designer.cs">
+      <DependentUpon>DeliveryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions.cs" />
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerFactoryResolver.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistrationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistrationForm.Designer.cs">
+      <DependentUpon>RegistrationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForm.Designer.cs">
+      <DependentUpon>ReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectionForm.Designer.cs">
+      <DependentUpon>SelectionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransportForm.Designer.cs">
+      <DependentUpon>TransportForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CargoForm.resx">
+      <DependentUpon>CargoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CourierForm.resx">
+      <DependentUpon>CourierForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerForm.resx">
+      <DependentUpon>CustomerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeliveryForm.resx">
+      <DependentUpon>DeliveryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RegistrationForm.resx">
+      <DependentUpon>RegistrationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm.resx">
+      <DependentUpon>ReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectionForm.resx">
+      <DependentUpon>SelectionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransportForm.resx">
+      <DependentUpon>TransportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DeliveryService.BLL.Contract\DeliveryService.BLL.Contract.csproj">
+      <Project>{1418C4B0-D951-4C1C-A24E-4968D50DE35B}</Project>
+      <Name>DeliveryService.BLL.Contract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DeliveryService.BLL\DeliveryService.BLL.csproj">
+      <Project>{D50A2DBB-C008-45D2-A049-8FB7294D8B0F}</Project>
+      <Name>DeliveryService.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DeliveryService.DAL.Contract\DeliveryService.DAL.Contract.csproj">
+      <Project>{3C5C86CC-2622-46B7-AEB5-E38BF36B58DF}</Project>
+      <Name>DeliveryService.DAL.Contract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DeliveryService.DAL\DeliveryService.DAL.csproj">
+      <Project>{D84DD47C-7FEE-485C-9489-422A60E0B4A3}</Project>
+      <Name>DeliveryService.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DeliveryService.Domain\DeliveryService.Domain.csproj">
+      <Project>{18BE6579-3252-4EB4-9C8E-CBB4DE324EA9}</Project>
+      <Name>DeliveryService.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DeliveryService.DTO\DeliveryService.DTO.csproj">
+      <Project>{A1545511-4C2B-4FB4-BC73-D14295CF85DD}</Project>
+      <Name>DeliveryService.DTO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\DeliveryService.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

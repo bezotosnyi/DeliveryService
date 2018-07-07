@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D50A2DBB-C008-45D2-A049-8FB7294D8B0F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DeliveryService.BLL</RootNamespace>
+    <AssemblyName>DeliveryService.BLL</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.resources">
+      <HintPath>..\packages\EntityFramework.ru.6.1.3\lib\net45\ru\EntityFramework.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CourierManager.cs" />
+    <Compile Include="CustomerManager.cs" />
+    <Compile Include="DeliveryManager.cs" />
+    <Compile Include="DepartureManager.cs" />
+    <Compile Include="ManagerFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportManager.cs" />
+    <Compile Include="SelectionManager.cs" />
+    <Compile Include="TransportManager.cs" />
+    <Compile Include="TypeOfCargoManager.cs" />
+    <Compile Include="UserManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DeliveryService.BLL.Contract\DeliveryService.BLL.Contract.csproj">
+      <Project>{1418C4B0-D951-4C1C-A24E-4968D50DE35B}</Project>
+      <Name>DeliveryService.BLL.Contract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DeliveryService.BLL.Transformer\DeliveryService.BLL.Transformer.csproj">
+      <Project>{8177783E-81F5-493B-BC66-772AA514432C}</Project>
+      <Name>DeliveryService.BLL.Transformer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DeliveryService.BLL.Validator\DeliveryService.BLL.Validator.csproj">
+      <Project>{b20cc86f-1ffc-4ad2-a2ea-4622c972dba5}</Project>
+      <Name>DeliveryService.BLL.Validator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DeliveryService.DAL.Contract\DeliveryService.DAL.Contract.csproj">
+      <Project>{3C5C86CC-2622-46B7-AEB5-E38BF36B58DF}</Project>
+      <Name>DeliveryService.DAL.Contract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DeliveryService.Domain\DeliveryService.Domain.csproj">
+      <Project>{18BE6579-3252-4EB4-9C8E-CBB4DE324EA9}</Project>
+      <Name>DeliveryService.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DeliveryService.DTO\DeliveryService.DTO.csproj">
+      <Project>{A1545511-4C2B-4FB4-BC73-D14295CF85DD}</Project>
+      <Name>DeliveryService.DTO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
