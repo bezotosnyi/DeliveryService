@@ -198,8 +198,5 @@
       <Name>DeliveryService.DTO</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\DeliveryService.jpg" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
